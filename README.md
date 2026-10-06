@@ -1,46 +1,296 @@
-# AI-Powered Unified Cyber Fraud Analysis & Digital Artifact Correlator
+# 🛡️ Cyber Fraud Correlator
 
-Screening-round PoC.
+### AI-Powered Unified Cyber Fraud Analysis & Digital Artifact Correlator
 
-## MVP pipeline
-Evidence -> SHA-256 + case chain -> Parsing -> Normalization -> Entity Resolution -> Graph -> Risk Scoring -> JSON/PDF brief
+<p align="center">
 
-## What the prototype demonstrates
-- Multi-source ingestion: CSV, XLS/XLSX, JSON, TXT/LOG, and `.eml` headers.
-- Flexible source headings mapped into a common investigation schema.
-- Deterministic, explainable links for shared phone, IMEI, IMSI, IP, MAC, UPI, and account identifiers.
-- Directed victim-to-mule-to-cash-out fund-flow reconstruction and multi-hop detection.
-- Explainable risk scoring for pass-through behaviour, rapid forwarding, and transaction velocity.
-- Per-file SHA-256 fingerprints plus an ordered case-chain hash; case files are stored in a unique local case folder.
-- Officer-facing, one-page PDF field brief and full JSON export.
+**Cyber Fraud Investigation** · **Digital Artifact Correlation** · **Entity Resolution** · **Risk Analysis**
 
-> Correlation is an investigative lead, not a finding of guilt. Validate all generated leads against original preserved evidence before operational action.
+</p>
 
-## Stack
-- FastAPI: backend/API
-- Pandas: CSV/XLSX normalization
-- NetworkX: relationship graph
-- Streamlit: lightweight field-officer dashboard
-- SQLite: local/offline evidence metadata
-- SHA-256: evidence integrity
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas" alt="Pandas">
+  <img src="https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge" alt="NetworkX">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge" alt="Security">
+</p>
 
-## Run
-```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-pip install -r requirements.txt
+---
 
-uvicorn backend.app.main:app --reload
-streamlit run dashboard/app.py
+## 🚨 Overview
+
+**Cyber Fraud Correlator** is a screening-round proof-of-concept for analyzing and correlating cyber-fraud evidence from multiple digital sources.
+
+The system converts fragmented evidence into a structured investigation workflow by combining:
+
+- 📂 Multi-source evidence ingestion
+- 🧹 Data normalization
+- 🔗 Entity resolution
+- 🕸️ Relationship graph analysis
+- 💰 Fund-flow reconstruction
+- ⚠️ Explainable risk scoring
+- 🔐 Evidence integrity verification
+- 📄 Investigation report generation
+
+### Core Investigation Pipeline
+
+```text
+📂 Evidence
+     │
+     ▼
+🔐 SHA-256 + Case Chain
+     │
+     ▼
+📑 Parsing
+     │
+     ▼
+🧹 Normalization
+     │
+     ▼
+🔗 Entity Resolution
+     │
+     ▼
+🕸️ Relationship Graph
+     │
+     ▼
+⚠️ Risk Scoring
+     │
+     ▼
+📄 PDF / JSON Investigation Brief
 ```
 
-Backend: http://127.0.0.1:8000
-API docs: http://127.0.0.1:8000/docs
-Dashboard: http://localhost:8501
+> **Important:** Correlation is an investigative lead, not a finding of guilt. Generated leads should be validated against the original preserved evidence before operational action.
 
-## Hackathon material
-- [Technical proposal](docs/TECHNICAL_PROPOSAL.md)
-- [Three-minute demonstration script](docs/DEMO_SCRIPT.md)
+---
 
-For a reliable demo, upload every file in `data/mock/`. The sample banking data creates a four-hop fund-flow chain; the telecom/device data creates shared IMEI/IP/MAC correlations.
+# ✨ Key Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 📂 Multi-Source Ingestion
+
+The prototype accepts multiple evidence formats:
+
+- CSV
+- XLS / XLSX
+- JSON
+- TXT / LOG
+- `.eml` headers
+
+Different source structures can be mapped into a common investigation schema.
+
+</td>
+
+<td width="50%">
+
+### 🔗 Entity Resolution
+
+The system identifies deterministic relationships using shared identifiers such as:
+
+- 📱 Phone
+- 📟 IMEI
+- 📡 IMSI
+- 🌐 IP
+- 💻 MAC
+- 💳 UPI
+- 🏦 Account identifiers
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+### 🕸️ Graph Correlation
+
+Connected entities are represented as a directed relationship graph, allowing investigators to explore relationships across multiple evidence sources.
+
+</td>
+
+<td>
+
+### 💰 Fund-Flow Reconstruction
+
+The prototype can reconstruct victim-to-mule-to-cash-out transaction paths and identify multi-hop movement.
+
+Example:
+
+```text
+Victim
+  ↓
+Mule Account
+  ↓
+Intermediate Account
+  ↓
+Cash-Out
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+### ⚠️ Explainable Risk Scoring
+
+Risk indicators are generated from observable behaviours such as:
+
+- Pass-through behaviour
+- Rapid forwarding
+- Transaction velocity
+
+</td>
+
+<td>
+
+### 🔐 Evidence Integrity
+
+Each evidence file can be fingerprinted using **SHA-256**, with an ordered case-chain hash maintained for the investigation.
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🔍 Investigation Workflow
+
+The system is designed around a simple investigative workflow:
+
+```text
+                 ┌──────────────────┐
+                 │  Multiple Sources│
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │     Parsing      │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │  Normalization   │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ Entity Resolution│
+                 └────────┬─────────┘
+                          │
+                    ┌─────┴─────┐
+                    ▼           ▼
+             🕸️ Graph       💰 Fund Flow
+                    │           │
+                    └─────┬─────┘
+                          ▼
+                  ⚠️ Risk Scoring
+                          │
+                    ┌─────┴─────┐
+                    ▼           ▼
+                📄 PDF       📦 JSON
+```
+
+---
+
+# 🕸️ Entity Correlation
+
+A major part of the prototype is connecting identifiers that appear across different evidence sources.
+
+For example:
+
+```text
+🏦 Banking Record
+       │
+       │ Account
+       ▼
+👤 Entity
+       │
+       │ Phone
+       ▼
+📱 Telecom Record
+       │
+       │ IMEI
+       ▼
+📟 Device
+       │
+       │ IP
+       ▼
+🌐 Network Artifact
+```
+
+This allows an investigator to move between related records instead of analyzing every file independently.
+
+---
+
+# 💰 Fund-Flow Analysis
+
+The system supports directed fund-flow reconstruction and multi-hop analysis.
+
+Example:
+
+```text
+┌─────────────┐
+│    Victim   │
+└──────┬──────┘
+       │
+       │ Transaction
+       ▼
+┌─────────────┐
+│ Mule Account│
+└──────┬──────┘
+       │
+       │ Forwarded
+       ▼
+┌─────────────┐
+│ Intermediate│
+│   Account   │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  Cash-Out   │
+└─────────────┘
+```
+
+The prototype can use transaction relationships and observed behaviour to generate explainable risk indicators.
+
+---
+
+# 🔐 Evidence Integrity
+
+Evidence integrity is handled using **SHA-256 fingerprints**.
+
+```text
+Evidence File
+      │
+      ▼
+   SHA-256
+      │
+      ▼
+File Fingerprint
+      │
+      ▼
+Ordered Case Chain
+```
+
+Case files are stored inside a unique local case directory.
+
+This provides an integrity-oriented record of the evidence used during an investigation.
+
+---
+
+# 📄 Investigation Outputs
+
+The prototype produces two primary forms of output.
+
+### 📦 JSON Export
+
+Structured investigation data suitable for further processing or integration.
+
+### 📄 PDF Field Brief
+
+A one-page, officer-facing investigation brief containing
