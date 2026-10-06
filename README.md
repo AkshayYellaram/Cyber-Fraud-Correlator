@@ -2,20 +2,20 @@
 
 ### AI-Powered Unified Cyber Fraud Analysis & Digital Artifact Correlator
 
-<p align="center">
+\<p align="center">
 
 **Cyber Fraud Investigation** · **Digital Artifact Correlation** · **Entity Resolution** · **Risk Analysis**
 
-</p>
+\</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas" alt="Pandas">
-  <img src="https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge" alt="NetworkX">
-  <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
-  <img src="https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge" alt="Security">
-</p>
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)" alt="Python">
+&#x20; \<img src="[https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge\&logo=fastapi)" alt="FastAPI">
+&#x20; \<img src="[https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge\&logo=pandas)" alt="Pandas">
+&#x20; \<img src="[https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge](https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge)" alt="NetworkX">
+&#x20; \<img src="[https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge\&logo=streamlit)" alt="Streamlit">
+&#x20; \<img src="[https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge](https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge)" alt="Security">
+\</p>
 
 ---
 
@@ -67,9 +67,9 @@ The system converts fragmented evidence into a structured investigation workflow
 
 # ✨ Key Features
 
-<table>
-<tr>
-<td width="50%">
+\<table>
+\<tr>
+\<td width="50%">
 
 ### 📂 Multi-Source Ingestion
 
@@ -83,9 +83,9 @@ The prototype accepts multiple evidence formats:
 
 Different source structures can be mapped into a common investigation schema.
 
-</td>
+\</td>
 
-<td width="50%">
+\<td width="50%">
 
 ### 🔗 Entity Resolution
 
@@ -99,19 +99,19 @@ The system identifies deterministic relationships using shared identifiers such 
 - 💳 UPI
 - 🏦 Account identifiers
 
-</td>
-</tr>
+\</td>
+\</tr>
 
-<tr>
-<td>
+\<tr>
+\<td>
 
 ### 🕸️ Graph Correlation
 
 Connected entities are represented as a directed relationship graph, allowing investigators to explore relationships across multiple evidence sources.
 
-</td>
+\</td>
 
-<td>
+\<td>
 
 ### 💰 Fund-Flow Reconstruction
 
@@ -129,11 +129,10 @@ Intermediate Account
 Cash-Out
 ```
 
-</td>
-</tr>
+\</td> \</tr>
 
-<tr>
-<td>
+\<tr>
+\<td>
 
 ### ⚠️ Explainable Risk Scoring
 
@@ -143,17 +142,17 @@ Risk indicators are generated from observable behaviours such as:
 - Rapid forwarding
 - Transaction velocity
 
-</td>
+\</td>
 
-<td>
+\<td>
 
 ### 🔐 Evidence Integrity
 
 Each evidence file can be fingerprinted using **SHA-256**, with an ordered case-chain hash maintained for the investigation.
 
-</td>
-</tr>
-</table>
+\</td>
+\</tr>
+\</table>
 
 ---
 
@@ -293,4 +292,254 @@ Structured investigation data suitable for further processing or integration.
 
 ### 📄 PDF Field Brief
 
-A one-page, officer-facing investigation brief containing
+A one-page, officer-facing investigation brief containing relevant findings and risk indicators.
+
+---
+
+# 🖥️ Dashboard
+
+The project includes a lightweight **Streamlit dashboard** designed for field-officer use.
+
+The dashboard provides an interface for:
+
+- Uploading evidence
+- Processing investigation data
+- Reviewing correlations
+- Exploring suspicious relationships
+- Reviewing risk indicators
+- Preparing investigation outputs
+
+### Dashboard
+
+> 📸 **Add a dashboard screenshot here**
+
+For example:
+
+```text
+docs/
+└── dashboard.png
+```
+
+Then add:
+
+```markdown
+![Cyber Fraud Correlator Dashboard](docs/dashboard.png)
+```
+
+---
+
+# 🏗️ Technology Architecture
+
+```text
+                 ┌───────────────────────┐
+                 │     Evidence Files    │
+                 │ CSV XLSX JSON LOG EML │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │       FastAPI         │
+                 │     Backend / API     │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │ Pandas Normalization  │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │   Entity Resolution   │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │ NetworkX Graph Layer  │
+                 └───────────┬───────────┘
+                             │
+                   ┌─────────┴─────────┐
+                   ▼                   ▼
+             Risk Scoring          Fund Flow
+                   │                   │
+                   └─────────┬─────────┘
+                             ▼
+                 ┌───────────────────────┐
+                 │ Investigation Output │
+                 │      PDF / JSON       │
+                 └───────────────────────┘
+```
+
+---
+
+# 🛠️ Technology Stack
+
+| Technology            | Purpose                 |
+| --------------------- | ----------------------- |
+| **Python**            | Core application        |
+| **FastAPI**           | Backend / REST API      |
+| **Pandas**            | Data normalization      |
+| **NetworkX**          | Relationship graph      |
+| **Streamlit**         | Field-officer dashboard |
+| **SQLite**            | Local evidence metadata |
+| **SHA-256**           | Evidence integrity      |
+| **Report Generation** | PDF investigation brief |
+
+---
+
+# 📂 Supported Evidence
+
+| Format     | Example Use                   |
+| ---------- | ----------------------------- |
+| CSV        | Banking / transaction records |
+| XLS / XLSX | Spreadsheet evidence          |
+| JSON       | Structured digital artifacts  |
+| TXT / LOG  | Logs and textual evidence     |
+| `.eml`     | Email header analysis         |
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AkshayYellaram/Cyber-Fraud-Correlator.git
+cd Cyber-Fraud-Correlator
+```
+
+Create a virtual environment:
+
+### Windows
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Running the Prototype
+
+Start the FastAPI backend:
+
+```bash
+uvicorn backend.app.main:app --reload
+```
+
+Start the Streamlit dashboard:
+
+```bash
+streamlit run dashboard/app.py
+```
+
+### Local Endpoints
+
+| Component | Address                      |
+| --------- | ---------------------------- |
+| Backend   | `http://127.0.0.1:8000`      |
+| API Docs  | `http://127.0.0.1:8000/docs` |
+| Dashboard | `http://localhost:8501`      |
+
+---
+
+# 🧪 Demo Data
+
+For the demonstration workflow, upload the files located in:
+
+```text
+data/mock/
+```
+
+The sample data demonstrates:
+
+- A four-hop banking fund-flow chain
+- Shared IMEI correlations
+- Shared IP correlations
+- Shared MAC correlations
+
+---
+
+# 🏆 Hackathon / Screening Prototype
+
+This project was developed as a **screening-round proof of concept** focused on demonstrating how fragmented cyber-fraud evidence can be transformed into an investigation-oriented view.
+
+### Demonstration Flow
+
+```text
+Evidence
+   ↓
+Integrity
+   ↓
+Parsing
+   ↓
+Normalization
+   ↓
+Correlation
+   ↓
+Graph
+   ↓
+Risk Indicators
+   ↓
+Investigation Brief
+```
+
+### Hackathon Material
+
+- [📘 Technical Proposal](docs/TECHNICAL_PROPOSAL.md)
+- [🎬 Three-Minute Demonstration Script](docs/DEMO_SCRIPT.md)
+
+---
+
+# ⚠️ Investigation Disclaimer
+
+**Cyber Fraud Correlator is an investigative assistance prototype.**
+
+A correlation, relationship, or risk score produced by the system should **not** be interpreted as proof of fraud or guilt.
+
+All generated leads should be validated against the original preserved evidence before operational, disciplinary, or legal action.
+
+---
+
+# 🔭 Future Improvements
+
+Potential improvements include:
+
+- [ ] Interactive investigation graph
+- [ ] Advanced entity-resolution techniques
+- [ ] Timeline-based evidence visualization
+- [ ] Additional forensic artifact formats
+- [ ] Improved transaction anomaly detection
+- [ ] Automated case report customization
+- [ ] Advanced investigator workflow
+- [ ] Additional correlation rules
+
+---
+
+# 👨‍💻 Author
+
+## Akshay Yellaram
+
+**Cybersecurity & IoT Student**
+
+Interested in:
+
+**Cybersecurity · Digital Forensics · AI/ML · Blockchain · Ethical Hacking**
+
+\<p align="center">
+
+⭐ If you find this project useful or interesting, consider giving the repository a star.
+
+\</p>
