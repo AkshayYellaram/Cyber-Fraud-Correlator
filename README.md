@@ -2,20 +2,14 @@
 
 ### AI-Powered Unified Cyber Fraud Analysis & Digital Artifact Correlator
 
-\<p align="center">
-
 **Cyber Fraud Investigation** · **Digital Artifact Correlation** · **Entity Resolution** · **Risk Analysis**
 
-\</p>
-
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)" alt="Python">
-&#x20; \<img src="[https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge\&logo=fastapi)" alt="FastAPI">
-&#x20; \<img src="[https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge\&logo=pandas)" alt="Pandas">
-&#x20; \<img src="[https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge](https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge)" alt="NetworkX">
-&#x20; \<img src="[https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge\&logo=streamlit)" alt="Streamlit">
-&#x20; \<img src="[https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge](https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge)" alt="Security">
-\</p>
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas)
+![NetworkX](https://img.shields.io/badge/NetworkX-Graph%20Analysis-orange?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit)
+![SHA-256](https://img.shields.io/badge/SHA--256-Evidence%20Integrity-black?style=for-the-badge)
 
 ---
 
@@ -65,13 +59,9 @@ The system converts fragmented evidence into a structured investigation workflow
 
 ---
 
-# ✨ Key Features
+## ✨ Key Features
 
-\<table>
-\<tr>
-\<td width="50%">
-
-### 📂 Multi-Source Ingestion
+### 📂 Multi-Source Evidence Ingestion
 
 The prototype accepts multiple evidence formats:
 
@@ -81,11 +71,7 @@ The prototype accepts multiple evidence formats:
 - TXT / LOG
 - `.eml` headers
 
-Different source structures can be mapped into a common investigation schema.
-
-\</td>
-
-\<td width="50%">
+Different source headings can be mapped into a common investigation schema.
 
 ### 🔗 Entity Resolution
 
@@ -99,19 +85,9 @@ The system identifies deterministic relationships using shared identifiers such 
 - 💳 UPI
 - 🏦 Account identifiers
 
-\</td>
-\</tr>
-
-\<tr>
-\<td>
-
 ### 🕸️ Graph Correlation
 
 Connected entities are represented as a directed relationship graph, allowing investigators to explore relationships across multiple evidence sources.
-
-\</td>
-
-\<td>
 
 ### 💰 Fund-Flow Reconstruction
 
@@ -121,18 +97,16 @@ Example:
 
 ```text
 Victim
-  ↓
+  │
+  ▼
 Mule Account
-  ↓
+  │
+  ▼
 Intermediate Account
-  ↓
-Cash-Out
+  │
+  ▼
+Cash-Out Account
 ```
-
-\</td> \</tr>
-
-\<tr>
-\<td>
 
 ### ⚠️ Explainable Risk Scoring
 
@@ -142,27 +116,19 @@ Risk indicators are generated from observable behaviours such as:
 - Rapid forwarding
 - Transaction velocity
 
-\</td>
-
-\<td>
-
 ### 🔐 Evidence Integrity
 
 Each evidence file can be fingerprinted using **SHA-256**, with an ordered case-chain hash maintained for the investigation.
 
-\</td>
-\</tr>
-\</table>
-
 ---
 
-# 🔍 Investigation Workflow
+## 🔍 Investigation Workflow
 
 The system is designed around a simple investigative workflow:
 
 ```text
                  ┌──────────────────┐
-                 │  Multiple Sources│
+                 │ Multiple Sources │
                  └────────┬─────────┘
                           │
                           ▼
@@ -182,7 +148,7 @@ The system is designed around a simple investigative workflow:
                           │
                     ┌─────┴─────┐
                     ▼           ▼
-             🕸️ Graph       💰 Fund Flow
+                 🕸️ Graph    💰 Fund Flow
                     │           │
                     └─────┬─────┘
                           ▼
@@ -190,12 +156,12 @@ The system is designed around a simple investigative workflow:
                           │
                     ┌─────┴─────┐
                     ▼           ▼
-                📄 PDF       📦 JSON
+                 📄 PDF       📦 JSON
 ```
 
 ---
 
-# 🕸️ Entity Correlation
+## 🕸️ Entity Correlation
 
 A major part of the prototype is connecting identifiers that appear across different evidence sources.
 
@@ -225,7 +191,7 @@ This allows an investigator to move between related records instead of analyzing
 
 ---
 
-# 💰 Fund-Flow Analysis
+## 💰 Fund-Flow Analysis
 
 The system supports directed fund-flow reconstruction and multi-hop analysis.
 
@@ -259,7 +225,7 @@ The prototype can use transaction relationships and observed behaviour to genera
 
 ---
 
-# 🔐 Evidence Integrity
+## 🔐 Evidence Integrity
 
 Evidence integrity is handled using **SHA-256 fingerprints**.
 
@@ -282,7 +248,7 @@ This provides an integrity-oriented record of the evidence used during an invest
 
 ---
 
-# 📄 Investigation Outputs
+## 📄 Investigation Outputs
 
 The prototype produces two primary forms of output.
 
@@ -296,7 +262,7 @@ A one-page, officer-facing investigation brief containing relevant findings and 
 
 ---
 
-# 🖥️ Dashboard
+## 🖥️ Dashboard
 
 The project includes a lightweight **Streamlit dashboard** designed for field-officer use.
 
@@ -309,9 +275,9 @@ The dashboard provides an interface for:
 - Reviewing risk indicators
 - Preparing investigation outputs
 
-### Dashboard
+### Dashboard Preview
 
-> 📸 **Add a dashboard screenshot here**
+> 📸 Add a screenshot of the dashboard here.
 
 For example:
 
@@ -328,7 +294,7 @@ Then add:
 
 ---
 
-# 🏗️ Technology Architecture
+## 🏗️ Technology Architecture
 
 ```text
                  ┌───────────────────────┐
@@ -344,7 +310,7 @@ Then add:
                              │
                              ▼
                  ┌───────────────────────┐
-                 │ Pandas Normalization  │
+                 │  Pandas Normalization │
                  └───────────┬───────────┘
                              │
                              ▼
@@ -365,40 +331,40 @@ Then add:
                              ▼
                  ┌───────────────────────┐
                  │ Investigation Output │
-                 │      PDF / JSON       │
+                 │      PDF / JSON      │
                  └───────────────────────┘
 ```
 
 ---
 
-# 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
-| Technology            | Purpose                 |
-| --------------------- | ----------------------- |
-| **Python**            | Core application        |
-| **FastAPI**           | Backend / REST API      |
-| **Pandas**            | Data normalization      |
-| **NetworkX**          | Relationship graph      |
-| **Streamlit**         | Field-officer dashboard |
-| **SQLite**            | Local evidence metadata |
-| **SHA-256**           | Evidence integrity      |
+| Technology | Purpose |
+|---|---|
+| **Python** | Core application |
+| **FastAPI** | Backend / REST API |
+| **Pandas** | Data normalization |
+| **NetworkX** | Relationship graph |
+| **Streamlit** | Field-officer dashboard |
+| **SQLite** | Local evidence metadata |
+| **SHA-256** | Evidence integrity |
 | **Report Generation** | PDF investigation brief |
 
 ---
 
-# 📂 Supported Evidence
+## 📂 Supported Evidence
 
-| Format     | Example Use                   |
-| ---------- | ----------------------------- |
-| CSV        | Banking / transaction records |
-| XLS / XLSX | Spreadsheet evidence          |
-| JSON       | Structured digital artifacts  |
-| TXT / LOG  | Logs and textual evidence     |
-| `.eml`     | Email header analysis         |
+| Format | Example Use |
+|---|---|
+| CSV | Banking / transaction records |
+| XLS / XLSX | Spreadsheet evidence |
+| JSON | Structured digital artifacts |
+| TXT / LOG | Logs and textual evidence |
+| `.eml` | Email header analysis |
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 
 Clone the repository:
 
@@ -431,15 +397,15 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Running the Prototype
+## ▶️ Running the Prototype
 
-Start the FastAPI backend:
+### Start the FastAPI backend
 
 ```bash
 uvicorn backend.app.main:app --reload
 ```
 
-Start the Streamlit dashboard:
+### Start the Streamlit dashboard
 
 ```bash
 streamlit run dashboard/app.py
@@ -447,15 +413,15 @@ streamlit run dashboard/app.py
 
 ### Local Endpoints
 
-| Component | Address                      |
-| --------- | ---------------------------- |
-| Backend   | `http://127.0.0.1:8000`      |
-| API Docs  | `http://127.0.0.1:8000/docs` |
-| Dashboard | `http://localhost:8501`      |
+| Component | Address |
+|---|---|
+| Backend | `http://127.0.0.1:8000` |
+| API Docs | `http://127.0.0.1:8000/docs` |
+| Dashboard | `http://localhost:8501` |
 
 ---
 
-# 🧪 Demo Data
+## 🧪 Demo Data
 
 For the demonstration workflow, upload the files located in:
 
@@ -472,7 +438,7 @@ The sample data demonstrates:
 
 ---
 
-# 🏆 Hackathon / Screening Prototype
+## 🏆 Screening-Round Prototype
 
 This project was developed as a **screening-round proof of concept** focused on demonstrating how fragmented cyber-fraud evidence can be transformed into an investigation-oriented view.
 
@@ -481,7 +447,7 @@ This project was developed as a **screening-round proof of concept** focused on 
 ```text
 Evidence
    ↓
-Integrity
+Integrity Verification
    ↓
 Parsing
    ↓
@@ -489,7 +455,7 @@ Normalization
    ↓
 Correlation
    ↓
-Graph
+Graph Analysis
    ↓
 Risk Indicators
    ↓
@@ -503,7 +469,7 @@ Investigation Brief
 
 ---
 
-# ⚠️ Investigation Disclaimer
+## ⚠️ Investigation Disclaimer
 
 **Cyber Fraud Correlator is an investigative assistance prototype.**
 
@@ -513,7 +479,7 @@ All generated leads should be validated against the original preserved evidence 
 
 ---
 
-# 🔭 Future Improvements
+## 🔭 Future Improvements
 
 Potential improvements include:
 
@@ -522,24 +488,18 @@ Potential improvements include:
 - [ ] Timeline-based evidence visualization
 - [ ] Additional forensic artifact formats
 - [ ] Improved transaction anomaly detection
-- [ ] Automated case report customization
+- [ ] Automated case-report customization
 - [ ] Advanced investigator workflow
 - [ ] Additional correlation rules
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-## Akshay Yellaram
+### Akshay Yellaram
 
 **Cybersecurity & IoT Student**
 
-Interested in:
-
-**Cybersecurity · Digital Forensics · AI/ML · Blockchain · Ethical Hacking**
-
-<p align="center">
+Cybersecurity · Digital Forensics · AI/ML · Blockchain · Ethical Hacking
 
 ⭐ If you find this project useful or interesting, consider giving the repository a star.
-
-</p>
