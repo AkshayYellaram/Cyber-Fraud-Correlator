@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+data/uploads/*
+reports/*
+.pytest_cache/
+.streamlit/
+
+# Large datasets
+*.csv
+*.pcap
+*.pcapng
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Build / dependency folders
+node_modules/
+dist/
+build/

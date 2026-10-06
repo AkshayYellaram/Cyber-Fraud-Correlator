@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pandas
+openpyxl
+networkx
+streamlit
+pyvis
+reportlab
+pydantic
+python-dateutil
