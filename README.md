@@ -538,8 +538,8 @@ Interested in:
 
 **Cybersecurity · Digital Forensics · AI/ML · Blockchain · Ethical Hacking**
 
-\<p align="center">
+<p align="center">
 
 ⭐ If you find this project useful or interesting, consider giving the repository a star.
 
-\</p>
+</p>
